@@ -9,9 +9,8 @@ import {
   Typography,
 } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
-import useStyle from "./Navbar";
-import logo from "../../assets/commerce";
-
+import useStyle from "./style";
+import logo from "../../assets/commerce.png";
 const Navbar = () => {
   const classes = useStyle();
   return (
