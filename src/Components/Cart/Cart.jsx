@@ -17,7 +17,7 @@ const Cart = ({
       <Typography variant="subtitle1">
         You have no items in your shopping cart,
         <Link to="/" className={classes.link}>
-           start to add some
+          start to add some
         </Link>
         !
       </Typography>
@@ -58,6 +58,8 @@ const Cart = ({
               type="button"
               variant="contained"
               color="primary"
+              component={Link}
+              to="/checkout"
             >
               Checkout
             </Button>
