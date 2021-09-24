@@ -25,7 +25,8 @@ const AddressForm = () => {
       <Typography variant="h6" gutterBottom>
         Shipping Address
       </Typography>
-      <FormProvider onSubmit="">
+      <FormProvider {...methods}>
+      <form onSubmit=''>
         <Grid container spacing={3}>
           <FormInput required name="firstName" label="First name" />
           <FormInput required name="lastName" label="Last name" />
@@ -58,6 +59,7 @@ const AddressForm = () => {
             </Select>
           </Grid>
         </Grid>
+        </form>
       </FormProvider>
     </>
   );
