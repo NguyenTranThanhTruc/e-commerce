@@ -40,7 +40,6 @@ const App = () => {
     fetchProducts();
     fetchCart();
   }, []);
-  console.log(cart);
   return (
     <Router>
       <div>
