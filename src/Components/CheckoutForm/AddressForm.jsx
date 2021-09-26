@@ -77,17 +77,17 @@ const AddressForm = ({ checkoutToken, next }) => {
   };
   useEffect(() => {
     fetchShippingCountries(checkoutToken.id);
-  }, []);
+  }, [checkoutToken.id]);
 
   useEffect(() => {
     if (shippingCountry)
       fetchShippingSubdivisions(checkoutToken.id, shippingCountry);
-  }, [shippingCountry]);
+  }, [checkoutToken.id, shippingCountry]);
 
   useEffect(() => {
     if (shippingCountry)
       fetchShippingOptions(checkoutToken.id, shippingCountry);
-  }, [shippingCountry]);
+  }, [checkoutToken.id, shippingCountry]);
 
   useEffect(() => {
     if (shippingSubdivision)
@@ -96,7 +96,7 @@ const AddressForm = ({ checkoutToken, next }) => {
         shippingCountry,
         shippingSubdivision
       );
-  }, [shippingSubdivision]);
+  }, [checkoutToken.id, shippingCountry, shippingSubdivision]);
 
   return (
     <>

@@ -12,7 +12,7 @@ const FormInput = ({ name, label, required }) => {
         control={control}
         defaultValue=""
         name={name}
-        render={({ field }) => <TextField fullWidth label={label} required />}
+        render={({ field }) => <TextField fullWidth label={label} required error={isError} />}
       />
     </Grid>
   );
